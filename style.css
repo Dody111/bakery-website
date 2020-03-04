@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/***************************************************Small*******************************************************/
+
+html{
+    font-size: 7px;
+}
+body{
+    background-color: white;
+    color:#686868;
+    font-family:"Alegreya Sans";
+    font-size: 17px;
+    padding: 0;
+    opacity: 0;
+   animation: show 1s both ease-in-out;
+}
+@keyframes show{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/******************************banner***********************************/
+.banner-container{
+    position: relative;
+    height: 100%;
+}
+.banner-container .banner{
+    background-image: url(images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+    text-align: center;
+    overflow: auto;
+    color: white;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    
+}
+.banner-container::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.144);
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+.banner-container .logo{
+    width: 30%;
+    padding: 2.5rem ;
+    position: relative;
+    transition: width 0.5s;
+
+}
+.banner-container .logo  img{
+    width: 100%;
+}
+.banner-container .banner .inner{
+    margin: 2rem auto ;
+    width: 80%;
+    position: relative;
+    padding: 1rem;
+    
+    
+}
+.banner-container .banner .inner p{
+    margin-bottom: 2.5rem;
+    font-size: 2.4rem;
+    line-height: 1.3;
+}
+
+.banner-container .banner .inner h1{
+    font-family: 'Alegreya';
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    font-weight: 500;   
+
+}
+.banner-container .banner .inner .btn{
+    padding: 15px 24px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    background-color: #8e7754;
+    border-radius: 4px;
+    border: 2px #8e7754 solid;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+.banner-container .banner .inner .btn-contact{
+    background-color: rgba(255, 255, 255, 0);
+    border-color: white ;
+    margin-left: 10px;
+}
+.banner-container .banner .inner .btn:hover{
+    background-color: white;
+    color:#686868;
+    border-color:  white;
+}
+.slider{
+    position: relative;
+    padding: 1rem;
+   text-align: center;
+   margin-bottom: 1rem;
+
+
+}
+.banner-container .banner .scroll{
+    border: rgba(255, 255, 255, 0.7) 2px solid;
+    width: 32px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 24px;   
+    color: white;
+    position: relative;
+    
+}
+.banner-container .scroll .slider-ball{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: slider 2.5s infinite ;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    
+    
+}
+@keyframes slider{
+    0%{top:6px; opacity: 1;}
+    /* 35%{
+        top:10px; opacity: 0.7;
+    }
+    75%{
+        top: 20px; opacity: 0.3;
+    } */
+    100%{top:30px;
+    opacity: 0;}
+}
+/*******************************************************************main content*******************************************************/
+.row{
+    
+    padding: 8% 6% 6%;
+    overflow: auto;
+}
+.col{
+    float: left;
+    width: 100%;
+    margin-bottom: 25px;
+    padding:1% 2%;
+}
+
+
+.intro .image img, .location .image img{
+    width: 100%;
+}
+
+.intro .details h2, .location .details h2, .contact .details h2{
+    color: #303030;
+    font-family: 'Alegreya';
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+.intro .details p, .location .details p, .footer-lists .about-us p,.contact .details p,.goods .details p,.goods .baked-goods p{
+    margin-bottom: 25px;
+    line-height: 1.7;
+   font-size:2.2rem ;
+}
+.intro .details .summary,.contact .details .contact-list,.footer-lists ul{
+    list-style: none;
+    padding: 0;
+}
+
+.intro .details .summary li,.contact .details .contact-list li{
+    margin-bottom: 20px;
+    font-size:2.3rem ;
+}
+
+.intro .details .summary i,.contact .details .contact-list i {
+    border: 1px solid rgb(0,0,0,0.15);
+    border-radius: 50%;
+    padding: 2%;
+    font-size: 20px;
+    color: #8e7754;
+    margin-right: 4%;
+
+}
+
+.location,.contact{
+    background-color: #f8f8f8;
+}
+/********************************************************************goods************************************************************/
+.goods .col{
+    text-align: center;
+}
+.goods .details h3{
+    color: #303030;
+    font-family: 'Alegreya';
+    font-size: 3.7rem;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.goods .baked-goods img{
+    width: 100%;
+    margin-bottom: 25px;
+}
+.goods .baked-goods h4,.footer-lists h4{
+    color: #303030;
+    font-family: 'Alegreya';
+    margin-bottom: 25px;
+    font-weight: 470;
+    font-size: 2.7rem;
+
+}
+
+
+/**************************************************************contact*****************************************************************/
+.contact iframe{
+    width: 100%;
+    height: 500px;
+    
+}
+.contact .details .contact-list i{
+    font-size: 15px;
+    background-color: #8e7754;
+    color: white;
+      
+}
+/******************************************************************footer***************************************************************/
+.footer-lists{
+    background-color: #403d38;
+    color: #969696;  
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-lists .contact-details{
+    position: relative;
+}
+.footer-lists .contact-details::after{
+    content: "";
+    background-image: url(images/contact-details-map.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.15;    
+}
+.footer-lists h4{
+    color: white;
+    font-size: 2.2rem;
+}
+
+.footer-lists li{
+    margin-bottom: 15px;
+    border-bottom: solid 1px #96969623;
+    padding-bottom: 15px;
+    font-size:2rem ;
+
+}
+.footer-lists ul .last{
+    border: none;
+}
+.footer-lists .opening-hours .arrow, .footer-lists .feedback .arrow{
+    padding-right: 4%;
+}
+.footer-lists .contact-details .contact-list i{
+    margin-right: 4%;
+
+}
+.footer-lists .about-us p{
+    font-size: 2rem;
+}
+
+.footer{
+    
+    background-color: #353330;
+    text-align: center;
+   }
+
+.footer .image{
+    width: 320px;
+    margin: 0 auto;
+    padding: 15px 30px 15px 15px;
+    
+}
+.footer img{
+    margin-bottom: 25px;
+    width: 100%; 
+
+}
+.footer p{
+    font-size: 1.6rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+.footer a{
+    border-radius: 50%;
+    color: #8c8a86;
+    background-color: #484540;
+    margin: 3px ;
+    padding: 14px;
+}
+
+.footer .btn-f:hover{
+    background-color:#4267b2;
+    color: white;
+}
+.footer  .btn-g:hover{
+    background-color: rgb(216, 71, 45);
+    color: white;
+}
+.footer .btn-t:hover{
+    background-color: rgb(106, 213, 255);
+    color: white;
+}
+.footer  .btn-l:hover{
+    background-color: rgb(60, 140, 216);
+    color: white;
+}
+
+
+
+
+    /**************************************small && Medium****************************************************************/
+@media screen and (min-width:768px){
+    html{
+        font-size: 8px;
+    }
+    .col-t-1{width:8.33%;}
+    .col-t-2{width:16.66%;}
+    .col-t-3{width:25%;}
+    .col-t-4{width:33.33%;}
+    .col-t-5{width:41.66%;}
+    .col-t-6{width:50%;}
+    .col-t-7{width:58.33%;}
+    .col-t-8{width:66.66%;}
+    .col-t-9{width:75%;}
+    .col-t-10{width:83.3%;}
+    .col-t-11{width:91.66%;}
+    .col-t-12{width:100%;}
+    .intro .details,.location .details,.contact .details{
+        padding: 4% 0;
+    }
+    .banner-container .logo{
+        width: 25%;
+    }
+    
+}
+/************************************************large && Xlarge*****************************************************************/
+@media screen and (min-width:992px){
+    html{
+        font-size: 10px;
+    }
+    .col-2{width:16.66%;}
+    .col-3{width:25%;}
+    .col-4{width:33.33%;}
+    .col-5{width:41.66%;}
+    .col-6{width: 50%;}
+    .col-7{width:58.33%;}
+    .col-8{width:66.66%;}
+    .col-9{width:75%;}
+    .col-10{width:83.3%;}
+    .col-11{width:91.66%;}
+    .col-12{width:100%;}
+    .intro .image, .location .image{
+        padding:  0;
+    }
+    .intro .details,.location .details,.contact .details{
+        padding: 4% 0;
+    }
+    .footer .image{
+        width:auto;
+        padding:0;        
+    }
+    .footer img{
+        margin-bottom: 25px;
+        width: auto; 
+    
+    }
+    .banner-container .banner .inner{
+        width: 50%;
+    }
+    .banner-container .logo{
+        width: 20%;
+    }
+   
+}
